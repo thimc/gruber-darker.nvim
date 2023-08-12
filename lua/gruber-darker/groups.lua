@@ -1,28 +1,28 @@
 local M = {}
 
 M.colors = {
-	fg        = "#e4e4ef",
-	fg_1      = "#f4f4ff",
-	fg_2      = "#f5f5f5",
-	white     = "#ffffff",
-	black     = "#000000",
-	bg_m1     = "#101010",
-	bg        = "#181818",
-	bg_1      = "#282828",
-	bg_2      = "#453d41",
-	bg_3      = "#484848",
-	bg_4      = "#52494e",
-	red_1     = "#c73c3f",
-	red       = "#f43841",
-	red_1     = "#ff4f58",
-	green     = "#73c936",
-	yellow    = "#ffdd33",
-	brown     = "#cc8c3c",
-	quartz    = "#95a99f",
+	fg = "#e4e4ef",
+	fg_1 = "#f4f4ff",
+	fg_2 = "#f5f5f5",
+	white = "#ffffff",
+	black = "#000000",
+	bg_m1 = "#101010",
+	bg = "#181818",
+	bg_1 = "#282828",
+	bg_2 = "#453d41",
+	bg_3 = "#484848",
+	bg_4 = "#52494e",
+	red_1 = "#c73c3f",
+	red = "#f43841",
+	red_1 = "#ff4f58",
+	green = "#73c936",
+	yellow = "#ffdd33",
+	brown = "#cc8c3c",
+	quartz = "#95a99f",
 	niagara_2 = "#303540",
 	niagara_1 = "#565f73",
-	niagara   = "#96a6c8",
-	wisteria  = "#9e95c7",
+	niagara = "#96a6c8",
+	wisteria = "#9e95c7",
 }
 
 M.setup = function()
@@ -61,11 +61,11 @@ M.setup = function()
 		Operator = { link = "Normal" },
 		Title = { fg = colors.niagara },
 
-		-- Statement = {},
 		Constant = { fg = colors.quartz },
+		Keyword = { fg = colors.yellow, bold = config.bold },
+		-- Statement = {},
 		-- Conditional = {},
 		-- Repeat = {},
-		Keyword = { fg = colors.yellow, bold = config.bold },
 		-- Exception = {},
 
 		Function = { fg = colors.niagara },
@@ -77,16 +77,16 @@ M.setup = function()
 		Precondit = { link = "PreProc" },
 
 		Type = { fg = colors.quartz },
-		-- StorageClass = {},
-		-- Structure = {},
 		Typedef = { fg = colors.yellow },
+		-- Structure = { },
+		-- StorageClass = { },
 
 		Special = { link = "Normal" },
 		SpecialChar = { link = "String" },
 		SpecialComment = { fg = colors.green },
-		-- Underlined = {},
 		Todo = { fg = colors.wisteria },
 		MatchParen = { bg = colors.bg_4 },
+		-- Underlined = {},
 
 		Error = { fg = colors.red_1 },
 		ErrorMsg = { fg = colors.red },
@@ -99,7 +99,7 @@ M.setup = function()
 		netrwLink = { fg = colors.yellow },
 
 		DiagnosticError = { fg = colors.red_1 },
-		DiagnosticWarn = { fg = colors.brown },
+		DiagnosticWarn = { fg = colors.yellow },
 		DiagnosticInfo = { fg = colors.green },
 
 		Pmenu = { bg = colors.bg_1 },
@@ -133,12 +133,13 @@ M.setup = function()
 
 		VertSplit = { fg = colors.bg_2 },
 
+		QuickFixLine = { link = "CursorLine" },
 
 		-- fugitive.nvim
 		diffAdded = { link = "DiffAdd" },
 		diffRemoved = { link = "DiffDelete" },
 
-    -- html
+		-- html
 		htmlLink = { fg = colors.niagara, underline = config.underline },
 		htmlTag = { fg = colors.quartz },
 		htmlTagName = { fg = colors.fg },
