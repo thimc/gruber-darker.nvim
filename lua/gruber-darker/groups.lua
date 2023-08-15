@@ -39,6 +39,8 @@ M.setup = function()
 		NormalFloat = { link = "Normal" },
 		NonText = { link = "Normal" },
 
+		FloatBorder = { fg = colors.fg },
+
 		Cursor = { fg = colors.yellow },
 		CursorLine = { bg = colors.bg_1 },
 
@@ -143,6 +145,15 @@ M.setup = function()
 		htmlLink = { fg = colors.niagara, underline = config.underline },
 		htmlTag = { fg = colors.quartz },
 		htmlTagName = { fg = colors.fg },
+
+		-- markdown
+		markdownH1 = { fg = colors.red_1 },
+		markdownH2 = { fg = colors.red_1 },
+		markdownH3 = { fg = colors.red_1 },
+		markdownH4 = { fg = colors.red_1 },
+		markdownH5 = { fg = colors.red_1 },
+		markdownBlockquote = { fg = colors.brown },
+		markdownUrl = { fg = colors.niagara, underline = config.underline },
 
 		-- telescope.nvim
 		-- TelescopeNormal = { },
